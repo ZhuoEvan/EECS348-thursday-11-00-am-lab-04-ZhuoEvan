@@ -6,17 +6,31 @@
 			padding: 10px;
 }
 </style>
-<form action="/action_page.php">
-<p> <input type = "text" id=red> </p>
-<button type = "button" onclick = "modify()"> Update Color </button>
-</form> </head> 
-<hr> <body>
+<h1 style = "color: blue">CSS Font Control</h1>
+</head> 
+<body>
+	Text R(0-255): <input type="number" id="txt_R" value="" min="0" max="255"> <br>
+    Text G(0-255): <input type="number" id="txt_G" value="" min="0" max="255"> <br>
+    Text B(0-255): <input type="number" id="txt_B" value="" min="0" max="255"> <br>
+	Border R(0-255): <input type="number" id="border_R" value="" min="0" max="255"> <br>
+    Border G(0-255): <input type="number" id="border_G" value="" min="0" max="255"> <br>
+    Border B(0-255): <input type="number" id="border_B" value="" min="0" max="255"> <br>
+    Border Width: <input type="text" id="border_width" value=""> <br>
+    <button onclick="alert_paragraph_color()">Update Color</button> <br>
 <script>
-function modify () {
-	const red = document.getElementById("red");
-	const dummytext = document.getElementById("dummytext");
-	dummytext.style.color = "rgb(${red},236,170)";
-	dummytext.style.border = "rgb(39,236,170)";
+function alert_paragraph_color() {
+	var txt_R = document.getElementById("txt_R").value;
+    var txt_G = document.getElementById("txt_G").value;
+    var txt_B = document.getElementById("txt_B").value;
+    var border_R = document.getElementById("border_R").value;
+    var border_G = document.getElementById("border_G").value;
+    var border_B = document.getElementById("border_B").value;
+    var border_width = document.getElementById("border_width").value;
+
+    var tag = document.getElementById("dummytext");
+	tag.style.color = `rgb(${txt_R},${txt_G},${txt_B})`;
+	tag.style.borderWidth = border_width
+    tag.style.borderColor = `rgb(${border_R},${border_G},${border_B})`;
 }
 </script>
 <p id="dummytext">

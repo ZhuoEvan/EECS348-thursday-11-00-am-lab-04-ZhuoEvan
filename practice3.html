@@ -4,9 +4,23 @@
 	<body>
 		<p> Enter Password:	<input id = "setpw" type = "text"> </p>
 		<p> Re-enter Password:	<input id = "matchpw" type = "password"> </p>
-		<button>Submit</button>
+		<button type="button" onclick = "submit()">Check Password</button>
+		<p style= "font-style: serif; font-size: 30px; color: green" id=pass><p>
 	<script>
+	function submit() {
+	const setpw = document.getElementById("setpw");
+	const matchpw = document.getElementById("matchpw");
+	if (setpw.value.length >= 8) {
+		if (setpw.value == matchpw.value) {
+			document.getElementById("pass").innerHTML = "The Two Passwords are Matched";
+		} else {
+			alert("Invalid Password: Passwords do not Match");
+		};
+	} else {
+		alert("Invalid Password: Password Length is too Short");
+	};
 	
+	}
 	</script>
 	</body>
 </html>
