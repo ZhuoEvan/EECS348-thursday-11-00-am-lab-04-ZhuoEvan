@@ -1,18 +1,3 @@
-<!doctype html>
-<html>
-
-<head><h1 style= "color: blue">PHP Multiplication Table</h1></head>
-<style>
-table, th, td {
-	border: 1px solid black;
-	} 
-</style>
-<body>
-    <form action="practice4.php" method="post">
-        Size of the multiplication table: <input type="text" name="size"><br>
-        <input type="submit">
-    </form>
-	
 <?php
 	$size = $_POST["size"];
 	function multiplyNums($num1, $num2) {
@@ -30,6 +15,3 @@ table, th, td {
 		}
 	echo "</table>";
 ?>
-</body>
-
-</html>
