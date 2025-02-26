@@ -1,3 +1,18 @@
 <!doctype html>
 <html>
+    <head>
+		<h1 style= "color: blue"> PHP Multiplication Table </h1>
+    </head>
+    <body>
+		<p>Multiplication Value: <input id="mult_value" type="number"></p>
+		<p id="mult_table"></p>
+        <?php
+			let mult_value = getElementById("mult_value");
+            for (let i = 0; i < mult_value; i++) {
+				let result = (i+1)*mult_value;
+				document.getElementById("mult_value").innerHTML = "|"mult_value"|"i+1"|"result"|"<br>
+			}
+        ?>
+
+    </body>
 </html>
